@@ -381,6 +381,91 @@ function generateMinefields () {
     }
     return returnList
 }
+function introScore () {
+    for (let index = 0; index < 16; index++) {
+        circleLight1.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight2.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight3.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight4.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight5.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight6.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight7.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight8.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        basic.pause(250)
+        circleLight1.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight2.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight3.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight4.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight5.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight6.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight7.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight8.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        basic.pause(250)
+        circleLight1.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight2.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight3.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight4.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight5.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight6.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        circleLight7.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight8.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+        basic.pause(250)
+        circleLight1.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight2.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight3.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight4.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight5.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight6.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight7.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        circleLight8.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+        basic.pause(250)
+    }
+    basic.pause(250)
+    circleLight1.showColor(Connected.colors(Connected.NeoPixelColors.Green))
+    circleLight2.showColor(Connected.colors(Connected.NeoPixelColors.Green))
+    circleLight3.showColor(Connected.colors(Connected.NeoPixelColors.Green))
+    circleLight4.showColor(Connected.colors(Connected.NeoPixelColors.Green))
+    circleLight5.showColor(Connected.colors(Connected.NeoPixelColors.Green))
+    circleLight6.showColor(Connected.colors(Connected.NeoPixelColors.Green))
+    circleLight7.showColor(Connected.colors(Connected.NeoPixelColors.Green))
+    circleLight8.showColor(Connected.colors(Connected.NeoPixelColors.Green))
+    basic.pause(1000)
+    circleLight1.showColor(Connected.rgb(139, 128, 0))
+    circleLight2.showColor(Connected.rgb(139, 128, 0))
+    circleLight3.showColor(Connected.rgb(139, 128, 0))
+    circleLight4.showColor(Connected.rgb(139, 128, 0))
+    circleLight5.showColor(Connected.rgb(139, 128, 0))
+    circleLight6.showColor(Connected.rgb(139, 128, 0))
+    circleLight7.showColor(Connected.rgb(139, 128, 0))
+    circleLight8.showColor(Connected.rgb(139, 128, 0))
+    basic.pause(1000)
+    circleLight1.showColor(Connected.rgb(255, 80, 0))
+    circleLight2.showColor(Connected.rgb(255, 80, 0))
+    circleLight3.showColor(Connected.rgb(255, 80, 0))
+    circleLight4.showColor(Connected.rgb(255, 80, 0))
+    circleLight5.showColor(Connected.rgb(255, 80, 0))
+    circleLight6.showColor(Connected.rgb(255, 80, 0))
+    circleLight7.showColor(Connected.rgb(255, 80, 0))
+    circleLight8.showColor(Connected.rgb(255, 80, 0))
+    basic.pause(1000)
+    circleLight1.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+    circleLight2.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+    circleLight3.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+    circleLight4.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+    circleLight5.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+    circleLight6.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+    circleLight7.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+    circleLight8.showColor(Connected.colors(Connected.NeoPixelColors.Red))
+    basic.pause(1000)
+    circleLight1.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+    circleLight2.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+    circleLight3.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+    circleLight4.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+    circleLight5.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+    circleLight6.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+    circleLight7.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+    circleLight8.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+}
 function lightSpace (Space: string, Effect: string) {
     sendString = "" + btToken + Space
     if (Effect == "Step") {
@@ -425,14 +510,52 @@ function lightSpace (Space: string, Effect: string) {
     radio.sendValue(sendString, sendValue)
     basic.pause(30)
 }
+function introTries () {
+    digitDisplay2 = TM1637.create(
+    DigitalPin.P12,
+    DigitalPin.P11,
+    7,
+    4
+    )
+    digitDisplay2.clear()
+    for (let index4 = 0; index4 <= 4; index4++) {
+        digitDisplay2.showNumber(4 - index4)
+        basic.pause(1000)
+    }
+    digitDisplay2.clear()
+}
 radio.onReceivedValue(function (name, value) {
-    Connected.showUserText(1, name)
-    Connected.showUserNumber(2, value)
     if (name.substr(0, btToken.length) == btToken) {
         instruction = name.substr(btToken.length, name.length - btToken.length)
         if (instruction == "Intro") {
-            Connected.showUserText(3, name)
-            Connected.showUserNumber(4, value)
+            if (value == 1) {
+                Connected.oledClear()
+                digitDisplay2 = TM1637.create(
+                DigitalPin.P12,
+                DigitalPin.P11,
+                7,
+                4
+                )
+                digitDisplay2.clear()
+                circleLight1.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+                circleLight2.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+                circleLight3.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+                circleLight4.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+                circleLight5.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+                circleLight6.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+                circleLight7.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+                circleLight8.showColor(Connected.colors(Connected.NeoPixelColors.Black))
+            } else if (value == 2) {
+                Connected.showUserText(2, "KYLE'S CASTLE")
+                Connected.showUserText(6, "[C] Introduction")
+                Connected.showUserText(8, "[D] Start")
+            } else if (value == 3) {
+                introTries()
+            } else if (value == 4) {
+                introScore()
+            } else {
+            	
+            }
         }
     }
 })
@@ -578,24 +701,12 @@ circleLight1 = scoreLightCircle.range(4, 1)
 circleLight2 = scoreLightCircle.range(5, 1)
 circleLight3 = scoreLightCircle.range(6, 1)
 circleLight4 = scoreLightCircle.range(7, 1)
-circleLight1.showColor(Connected.colors(Connected.NeoPixelColors.Black))
-circleLight2.showColor(Connected.colors(Connected.NeoPixelColors.Black))
-circleLight3.showColor(Connected.colors(Connected.NeoPixelColors.Black))
-circleLight4.showColor(Connected.colors(Connected.NeoPixelColors.Black))
-circleLight5.showColor(Connected.colors(Connected.NeoPixelColors.Black))
-circleLight6.showColor(Connected.colors(Connected.NeoPixelColors.Black))
-circleLight7.showColor(Connected.colors(Connected.NeoPixelColors.Black))
-circleLight8.showColor(Connected.colors(Connected.NeoPixelColors.Black))
 digitDisplay2 = TM1637.create(
 DigitalPin.P12,
 DigitalPin.P11,
 7,
 4
 )
-digitDisplay2.intensity(7)
 digitDisplay2.showNumber(btGroup)
 radio.sendValue("" + btToken + "Intro", 0)
-Connected.showUserText(2, "KYLE'S CASTLE")
-Connected.showUserText(4, "press a button:")
-Connected.showUserText(6, "[C] Introduction")
-Connected.showUserText(8, "[D] Start")
+introScore()
